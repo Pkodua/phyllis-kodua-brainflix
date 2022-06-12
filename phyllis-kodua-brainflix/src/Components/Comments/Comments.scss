@@ -103,34 +103,46 @@
     }
     
     &__top-container{
-        margin-left: 10%;
+        margin-left: 5%;
         margin-top: 10%;
-        gap: 20%;
+       
       
        
     }
     &__avatar {
-        width: 20%;
+       
         height: 20%;
-        margin-top: 6%;
+       
     }
     &__avatar img{
-        width: 30%;
+       width:50px;
     }
     &__name{
         font-family: 'Avenir';
         font-weight: 600;
         color: $BrainFlix-Black;
+        font-size: .8em;
+        margin-left: 2%;
     }
     &__date{
         font-family: 'Avenir';
-       
+        font-weight: 600;
+        color: $BrainFlix-Black;
+        font-size: .8em;
+        margin-left: 35%;
     }
+       
+    
+   
+       
+    
     &__content{
         font-family: 'Avenir';
         width: 80%;
         line-height: 1.5em;
+        font-weight: 400;
         margin-left: 15%;
+        font-size: 1em;
     }
     &__top-container{
         display: flex;
