@@ -18,14 +18,14 @@ export default class MainPage extends Component {
     currentId = this.props.match.params.id
     currentPath = this.props.match.path
     AxiosGet = (id) => {
-        return axios.get(`${API_URL}videos/${id}/?api_key=${API_KEY}`).then(response => {
+        return axios.get(`${API_URL}videos/${id}`).then(response => {
             this.setState({
                 selectedVideo: response.data
             })
         }).catch(err => console.log(err))
     }
     componentDidMount() {
-        axios.get(`${API_URL}videos/?api_key=${API_KEY}`).then(response => {
+        axios.get(`${API_URL}videos/`).then(response => {
 
             if (this.currentPath === "/") {
                 this.AxiosGet(response.data[0].id)
