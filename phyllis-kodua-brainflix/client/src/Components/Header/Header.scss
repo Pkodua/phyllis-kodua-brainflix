@@ -1,0 +1,126 @@
+@use './../../styles/partials/variables' as *;
+@use './../../styles/partials/mixins' as *;
+@use './../../styles/partials/typography' as *;
+
+
+.header{
+    
+    display: flex;
+    flex-direction: column;
+    
+    &__container{
+        display: flex;
+        gap: 5%;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+    &__logo {
+        width:40%;
+        margin: 5% 0% 2% 30%;
+
+
+
+    }
+    &__search input{
+        width: 20em;
+        height:3.5em;
+        border-radius: .5em;
+        background-color: $Alabaster;
+        border: $Mercury solid .1em;
+        text-indent: 3em;
+        font-size: 1.1em;
+        
+        background: transparent url("./../../Assets/Icons/search.svg") no-repeat left;
+        background-size: 8%;
+        background-position: 2%;
+    }
+    &__search input::placeholder{
+        font-family: 'Avenir';
+        @include Body;
+
+    }
+    &__profile {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        
+       
+        
+    }
+
+    &__profile img{
+        width: 60px;
+        height: 60px;
+       
+        
+    }
+    &__button button{
+        border: none;
+       border-radius: .5em;
+        width:28em;
+        height: 4em;
+        color: white;
+        background: $BrainFlix-Blue url("./../../Assets/Icons/upload.svg") no-repeat left;
+        background-position: 5%;
+        background-size: 10%;
+        font-size: .9em;
+        @include Body;
+        margin-left: 5%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+
+    }
+}   
+
+
+@include tablet{
+    .header{
+        position: relative;
+        flex-direction: row;
+      
+        &__logo {
+            width: 15%;
+            margin-left: 2%;
+            margin-top: 3%;
+        }
+        &__search input{
+            width: 15em;
+            height: 2.3em;
+            margin-top: 5%;
+            margin-left: 15%;
+        }
+        &__button{
+            margin-top: 2.5%;
+        }
+        &__button button{
+            width: 13em;
+            height: 3em;
+            margin-top: 5%;
+            margin-left: 25%;
+        
+        }
+        
+        &__profile {
+            position: absolute;
+            left: 90%;
+            margin-top: 1%;
+            
+        }
+       
+    
+      
+    }
+}
+
+@include desktop{
+   .header{ 
+        &__search input{
+           margin-left: 170%;
+        }
+        &__button{
+            margin-left: 30%;
+        }
+    }
+}
