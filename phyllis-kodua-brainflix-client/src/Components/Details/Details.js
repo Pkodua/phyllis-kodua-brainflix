@@ -1,6 +1,6 @@
 import React from 'react'
-import ViewIcon from './../../Assets/Icons/views.svg'
-import Likes from './../../Assets/Icons/likes.svg'
+import ViewIcon from '../../Assets/Icons/views.svg'
+import Likes from '../../Assets/Icons/likes.svg'
 import './Details.scss'
 
 export default function Details({ vidInfo }) {

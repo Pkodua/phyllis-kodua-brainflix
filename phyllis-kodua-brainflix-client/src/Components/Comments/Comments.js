@@ -1,9 +1,9 @@
 import { API_KEY, API_URL } from '../../apiConfig/apiConfig';
-import '../Comments/Comments.scss'
-import Avatar from './../../Assets/Images/grey-circle.png';
+import './Comments.scss'
+import Avatar from '../../Assets/Images/grey-circle.png';
 import React, { Component } from 'react'
 import axios from 'axios';
-import Profile from './../../Assets/Images/profile.jpg';
+import Profile from '../../Assets/Images/profile.jpg';
 
 export default class Comments extends Component {
     state = {

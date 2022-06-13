@@ -1,5 +1,5 @@
 import React from 'react'
-import '../SideVideos/SideVideos.scss'
+import './SideVideos.scss'
 import { Link } from 'react-router-dom'
 
 

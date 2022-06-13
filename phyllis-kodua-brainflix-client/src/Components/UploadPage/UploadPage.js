@@ -1,5 +1,5 @@
 import React from 'react';
-import '../UploadPage/UploadPage.scss';
+import './UploadPage.scss';
 import thumbnail from '../../Assets/Images/thumbnail.jpg';
 
 

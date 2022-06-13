@@ -1,15 +1,14 @@
 const express = require("express");
+const videosRouter = require("./routes/videos");
+const cors = require("cors");
+
+const port = process.argv[2] || 3000;
+
 const app = express();
-require('dotenv').config();
-const PORT = process.env.PORT || 8080;
 app.use(express.json());
-
-// start the server and listen on port 5000
-app.listen(PORT, () =>{});
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static("public"));
-
-const vidRoutes = require("./routes/videos.js");
-app.use("/videos", vidRoutes);
-
+app.use(cors());
+app.use("/videos", videosRouter);
+app.listen(port, () => {
+  console.log(`I'm listening on port ${port}`);
+});
