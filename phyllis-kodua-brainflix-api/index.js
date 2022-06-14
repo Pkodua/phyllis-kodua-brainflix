@@ -2,7 +2,7 @@ const express = require("express");
 const videosRouter = require("./routes/videos");
 const cors = require("cors");
 
-const port = process.argv[2] || 3000;
+const port = process.argv[2] || 5000;
 
 const app = express();
 app.use(express.json());
