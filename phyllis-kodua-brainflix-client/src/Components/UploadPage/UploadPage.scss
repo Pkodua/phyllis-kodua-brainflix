@@ -7,10 +7,14 @@
     flex-direction: column;
     padding:0 2% 2%;
     border-top: 1px solid $Mercury; 
+    font-family: 'Avenir';
+    font-weight: 400;
     
 
     @include desktop {
         padding:0 10rem 10rem;
+        font-family: 'Avenir';
+        color: $Silver;
     }
     &__header{
         padding: 2rem 0;
@@ -52,6 +56,71 @@
         overflow: hidden;
         max-height: auto;
         max-width: 100%;
+       
+        @include desktop {
+            min-height: 12.7rem
+        }
+
+
+    }
+    &__description{
+        @include Body;
+        font-family: 'Avenir';
+        color: $Silver;
+        .upload {
+    display: flex;
+    flex-direction: column;
+    padding:0 2% 2%;
+    border-top: 1px solid $Mercury; 
+    font-family: 'Avenir';
+    font-weight: 400;
+    
+
+    @include desktop {
+        padding:0 10rem 10rem;
+        font-family: 'Avenir';
+        color: $Silver;
+    }
+    &__header{
+        padding: 2rem 0;
+        @include tablet {
+            padding: 2rem 0;
+
+            border-bottom: 2px solid $Mercury;
+        }
+    }
+}
+
+.inner-load {
+    @include tablet {
+        padding: 2rem 0;
+    }
+    @include desktop {
+        display: flex;
+    }
+    
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+        flex-grow: 3;
+        position: relative;
+        bottom: 1rem;
+    }
+    &-left { 
+        @include tablet {
+
+            max-width: 50%;
+        }
+        @include desktop {
+            max-width: 36%;
+        }
+        &-img-wrapper{
+        overflow: hidden;
+        max-height: auto;
+        max-width: 20%;
         border-radius: 4px;
         @include desktop {
             min-height: 12.7rem
@@ -61,12 +130,125 @@
     }
     &__description{
         @include Body;
+        font-family: 'Avenir';
         color: $Silver;
 
     }
-      &__img{
+      &__img-left {
+          width: 20%;
           object-fit: cover;
-          max-width: 100%;
+          max-width: 40%;
+          max-height: 100%;
+          border-radius: 4px;
+            @include desktop {
+                height: 12.7rem;
+
+            }
+        }
+}
+
+    &-one {
+        display: flex;
+        flex-direction: column;
+        @include desktop {
+            flex-direction: row;
+        }
+    }
+
+    &-right {
+        display: flex;
+        flex-direction: column;
+        @include desktop {
+            min-width: 70%;
+            position: relative;
+            bottom: 1rem ;
+            padding-left: 1rem;
+        }
+    }
+
+    &__label {
+        @include Body;
+        color: $Silver;
+        padding-top: 1rem;
+    }
+
+    &__input {
+        background-color: $Alabaster;
+        border-radius: 4px;
+        border: 1px solid $Mercury;
+        height: 5rem;
+        padding-left: 2%;
+        font-family: 'Avenir';
+        @include desktop {
+
+        }
+        &:focus {
+            outline: none;
+            border: 2px solid ;
+           }
+     
+    }
+
+    &__text-area {
+        background-color: $Alabaster;
+        border-radius: 4px;
+        border: 1px solid $Mercury;
+        resize: none;
+        height: 5rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        font-family: 'Avenir';
+        @include tablet {
+            margin-bottom: 2rem;
+        }
+        &:focus {
+            outline: none;
+            border: 2px solid ;
+           }
+     
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    @include tablet {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+    
+        border-top: 2px solid $Mercury;
+    }
+    &__publish {
+
+        padding: 2% 0;
+        background: $BrainFlix-Blue url("./../../Assets/Icons/upload.svg") no-repeat left;
+        border: none;
+        border-radius: .5em;
+        width:35em;
+        height: 4em;
+        color: white;
+        font-family: 'Avenir';
+        @include tablet {
+            min-width: 160%;
+        }
+    }
+    &__cancel{
+        border: none;
+        background-color: transparent;
+        color: $BrainFlix-Blue;
+        margin-top: 10%;
+        font-family: 'Avenir';
+
+    }
+    
+    
+}
+
+    }
+      &__img {
+          object-fit: cover;
+          max-width: 40%;
           max-height: 100%;
           border-radius: 4px;
             @include desktop {
@@ -149,11 +331,39 @@
         border-top: 2px solid $Mercury;
     }
     &__publish {
+
         padding: 2% 0;
+        background: $BrainFlix-Blue url("./../../Assets/Icons/upload.svg") no-repeat left;
+        border: none;
+        border-radius: .5em;
+        width:35em;
+        height: 4em;
+        color: white;
+        font-family: 'Avenir';
         @include tablet {
             min-width: 160%;
         }
     }
+    &__cancel{
+        border: none;
+        background-color: transparent;
+        color: $BrainFlix-Blue;
+        margin-top: 10%;
+        font-family: 'Avenir';
+
+    }
     
     
 }
+
+img.form__img-left {
+    width: 100%;
+
+    
+    border-radius: 4px;
+      @include desktop {
+          height: 12.7rem;
+
+      }
+}
+

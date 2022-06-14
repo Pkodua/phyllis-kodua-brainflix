@@ -1,4 +1,4 @@
-import { API_KEY, API_URL } from '../../apiConfig/apiConfig';
+
 import './Comments.scss'
 import Avatar from '../../Assets/Images/grey-circle.png';
 import React, { Component } from 'react'
@@ -11,14 +11,14 @@ export default class Comments extends Component {
         comments: this.props.vidInfo.comments
     }
     axiosGet = (id) => {
-        return axios.get(`${API_URL}videos/${id}/?api_key=${API_KEY}`).then(response => {
+        return axios.get('http://localhost:5000/videos/').then(response => {
             this.setState({
                 comments: response.data.comments
             })
         }).catch(err => console.log(err))
     }
     axiosPost = (id, newComment) => {
-        return axios.post(`${API_URL}videos/${id}/comments?api_key=${API_KEY}`, newComment).then(response => {
+        return axios.post(`http://localhost:5000/videos/${id}/`, newComment).then(response => {
             this.axiosGet(id)
         }).catch(err => console.log("Error! it's about", err))
     }
@@ -118,7 +118,7 @@ export default class Comments extends Component {
          
 
         
-           {this.state.comments.sort((a, b) => {
+           {/* {this.state.comments.sort((a, b) => {
                 return b.timestamp - a.timestamp
             }).map((comment) => {
 
@@ -130,7 +130,7 @@ export default class Comments extends Component {
                     return this.newComment("commentsLoaded-top__circle", comment)
 
                 }
-            })}
+            })} */}
         
         </div >
 
